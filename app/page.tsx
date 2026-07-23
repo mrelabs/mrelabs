@@ -1,53 +1,64 @@
-import Link from "next/link";
+import TypingLogo from "@/components/effects/TypingLogo";
+import GridBackground from "@/components/ui/GridBackground";
+import GlowButton from "@/components/ui/GlowButton";
 
 
 export default function Home() {
 
   return (
 
-    <main className="min-h-screen bg-black text-white">
+    <main
+      className="
+        relative
+        isolate
+
+        min-h-screen
+        overflow-hidden
+
+        bg-black
+        text-white
+      "
+    >
+
+      <GridBackground />
 
 
-      <section className="flex min-h-screen flex-col items-center justify-center px-6 text-center">
+      <section
+        className="
+          relative
+          z-10
+
+          flex
+          min-h-screen
+
+          flex-col
+          items-center
+          justify-center
+
+          px-6
+          text-center
+        "
+      >
+
+        <TypingLogo />
 
 
-        <p className="mb-4 text-sm uppercase tracking-[0.3em] text-gray-500">
-          MRE Labs
-        </p>
+        <div
+          className="
+            relative
+            z-20
 
+            mt-12
 
-        <h1 className="max-w-5xl text-5xl font-bold tracking-tight sm:text-7xl">
-          Building intelligent software for tomorrow.
-        </h1>
+            opacity-0
 
+            animate-fade-in
 
-        <p className="mt-6 max-w-3xl text-xl text-gray-400">
-          MRE Labs creates AI-powered platforms and software solutions
-          designed to automate workflows, improve decision making,
-          and solve real-world problems.
-        </p>
+            [animation-delay:1800ms]
+          "
+        >
 
-
-
-        <div className="mt-10">
-
-
-          <Link
-            href="/products"
-            className="
-            rounded-lg 
-            bg-white 
-            px-8 
-            py-4 
-            font-semibold 
-            text-black 
-            transition 
-            hover:bg-gray-200
-            "
-          >
-            Explore Solutions
-          </Link>
-
+          <GlowButton />
 
         </div>
 
